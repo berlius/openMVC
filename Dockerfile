@@ -19,9 +19,7 @@ RUN cmake -DCMAKE_BUILD_TYPE=RELEASE -DOpenMVG_BUILD_TESTS=ON -DOpenMVG_BUILD_EX
 
 RUN cmake -G "CodeBlocks - Unix Makefiles" -DCMAKE_BUILD_TYPE=RELEASE . ../openMVG/src/
 
-RUN make -j $(nproc)
-
-RUN make test
+RUN make && make test
 
 WORKDIR "/root"
 CMD ["/bin/bash"]
