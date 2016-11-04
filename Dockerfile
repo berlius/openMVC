@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install imagemagick -y  \
     libxrandr-dev \
     graphviz
 
-RUN git clone --recursive git://github.com/openMVG/openMVG.git
+RUN git clone --recursive https://github.com/openMVG/openMVG.git
 RUN mkdir openMVG_Build && cd openMVG_Build
 
 RUN cmake -DCMAKE_BUILD_TYPE=RELEASE -DOpenMVG_BUILD_TESTS=ON -DOpenMVG_BUILD_EXAMPLES=ON . ../openMVG/src/
