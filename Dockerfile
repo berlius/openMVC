@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+# dockerfile from https://github.com/baritone/openMVG/blob/master/Dockerfile
+
 # Add openMVG binaries to path
 ENV PATH $PATH:/opt/openMVG_Build/install/bin
 
