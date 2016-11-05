@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y \
   python-pip
 
 # Clone the openvMVG repo 
-ADD . /opt/openMVG
+RUN git clone https://github.com/baritone/openMVG /opt/openMVG
 RUN cd /opt/openMVG && git submodule update --init --recursive
 
 # Build
