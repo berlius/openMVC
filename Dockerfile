@@ -33,3 +33,8 @@ RUN mkdir /opt/openMVG_Build && cd /opt/openMVG_Build && cmake -DCMAKE_BUILD_TYP
   -DOpenMVG_BUILD_EXAMPLES=ON . ../openMVG/src/ && make
 
 RUN cd /opt/openMVG_Build && make test
+
+ENV PATH=/opt/openMVG_Build/Linux-x86_64-RELEASE:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+WORKDIR "/root"
+CMD ["/bin/bash"]
